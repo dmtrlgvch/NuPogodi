@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wolf</title>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="game-box">
+    <div class="modal modal-greeting" id="modal-greeting">
+      <div class="modal-body">
+          <h1>Welcome!</h1>
+          <p>Control with the arrows on your keyboard</p>
+          <img src="assets/" alt="">
+          <button class="btn-start-game">Start</button>
+      </div>
+    </div>
+
+    <div id="game" class="game">
+        
+      <div class="score" id="score">0</div>
+      <div class="hp" id="hp"><span>HP</span></div>
+      <div class="wolf top-left" id="wolf">
+        <div class="egg hidden egg-left top-left" id="egg-top-left">
+          <div class="egg-img"></div>
+        </div>
+        <div class="egg hidden egg-right top-right" id="egg-top-right">
+          <div class="egg-img"></div>
+        </div>
+        <div class="egg hidden egg-left  bottom-left" id="egg-bottom-left">
+          <div class="egg-img"></div>
+        </div>
+        <div class="egg hidden egg-right bottom-right" id="egg-bottom-right">
+          <div class="egg-img"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal game-over" id="modal-game-over">
+      <div class="modal-body">
+        <h1>Game Over :(</h1>
+        <button class="btn-start-game">Retry</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

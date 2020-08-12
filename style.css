@@ -1,0 +1,351 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  font-family: 'Indie Flower', cursive;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  background-color: #fff;
+}
+form *{
+  font-family: 'Gilroy', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+a,span,button,input{
+  font: inherit;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+:root{
+  --animation-time: 2s;
+}
+
+.game-box {
+  position: relative;
+  border-radius: 33px;
+  padding: 10px;
+  background-color: rgb(240, 240, 240);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 111;
+  padding: 33px 77px;
+  background-color: bisque;
+  text-align: center;
+  border-radius: 33px;
+}
+.game-over {
+  display: none;
+}
+.modal-body > h1 {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 33px;
+}
+.modal-body > p {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 33px;
+}
+.btn-start-game {
+  font-size: 33px;
+  font-weight: 800;
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 10px;
+  background-color: burlywood;
+  cursor: pointer;
+}
+.game {
+  width: 1276px;
+  height: 627px;
+  margin: 0 auto;
+  background: url("assets/Static.png") no-repeat 0 0 / 100%;
+  padding-bottom: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 11;
+}
+.score {
+  position: absolute;
+  top: 10px;
+  left: 300px;
+  font-size: 33px;
+}
+.score::before {
+  content: 'Score';
+  font-size: 33px;
+  font-weight: 800;
+  padding-right: 10px;
+}
+.hp {
+  position: absolute;
+  height: 100px;
+  width: 303px;
+  top: 20px;
+  right: 300px;
+  background: url('assets/sprites-HP-black.png') no-repeat, url('assets/sprites-HP-gray.png') no-repeat;
+  background-position-x: 0,0;
+}
+.hp > span {
+  font-size: 33px;
+  font-weight: 800;
+}
+.hp.x2{
+  background-position-x: 104px,0;
+}
+.hp.x1{
+  background-position-x: 208px,0;
+}
+.hp.x0{
+  background-position-x: 312px,0;
+}
+
+.wolf {
+  background: url('assets/sprites-wolf.png') no-repeat;
+  width: 795px;
+  height: 355px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+.wolf.top-left {
+  background-position: 0px 7px; 
+}
+.wolf.bottom-left {
+  background-position: -17px -749px;
+}
+.wolf.top-right {
+  background-position: 414px -371px;
+}
+.wolf.bottom-right {
+  background-position: 414px -1141px;
+}
+
+
+
+.egg {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.egg.hidden{
+  visibility: hidden;
+}
+
+.egg-left > .egg-img {
+  background-position: 0 0;
+  -webkit-transform: scale(1.5) rotate(-29deg);
+      -ms-transform: scale(1.5) rotate(-29deg);
+          transform: scale(1.5) rotate(-29deg);
+}
+
+.egg-right > .egg-img {
+  background-position: 0 100%;
+  -webkit-transform: scale(1.5) rotate(29deg);
+      -ms-transform: scale(1.5) rotate(29deg);
+          transform: scale(1.5) rotate(29deg);
+}
+.egg-img {
+  width: 38px;
+  height: 38px;
+  background: url("assets/sprites-eggs.png") no-repeat 0 0 / auto 200%;
+}
+
+
+.egg.top-left{
+  -webkit-transform: rotate(29deg) translate(-523px, 46px);
+      -ms-transform: rotate(29deg) translate(-523px, 46px);
+          transform: rotate(29deg) translate(-523px, 46px);
+}
+.egg.top-right{
+  -webkit-transform: rotate(-29deg) translate(590px, 84px);
+      -ms-transform: rotate(-29deg) translate(590px, 84px);
+          transform: rotate(-29deg) translate(590px, 84px);
+}
+.egg.bottom-left {
+  -webkit-transform: rotate(29deg) translate(-510px, 234px);
+      -ms-transform: rotate(29deg) translate(-510px, 234px);
+          transform: rotate(29deg) translate(-510px, 234px);
+}
+.egg.bottom-right {
+  -webkit-transform: rotate(-29deg) translate(439px, 197px);
+      -ms-transform: rotate(-29deg) translate(439px, 197px);
+          transform: rotate(-29deg) translate(439px, 197px);
+}
+
+
+.egg.animated>.egg-img{
+  -webkit-animation: egg-sprite var(--animation-time) steps(4) infinite;
+          animation: egg-sprite var(--animation-time) steps(4) infinite;
+}
+.egg.top-left.animated{
+  -webkit-animation: top-left-egg-drop var(--animation-time) steps(4) infinite;
+          animation: top-left-egg-drop var(--animation-time) steps(4) infinite;
+}
+.egg.bottom-left.animated{
+  -webkit-animation: bottom-left-egg-drop var(--animation-time) steps(4) infinite;
+          animation: bottom-left-egg-drop var(--animation-time) steps(4) infinite;
+}
+.egg.top-right.animated{
+  -webkit-animation: top-right-egg-drop var(--animation-time) steps(4) infinite;
+          animation: top-right-egg-drop var(--animation-time) steps(4) infinite;
+}
+.egg.bottom-right.animated{
+  -webkit-animation: bottom-right-egg-drop var(--animation-time) steps(4) infinite;
+          animation: bottom-right-egg-drop var(--animation-time) steps(4) infinite;
+}
+
+
+@-webkit-keyframes top-left-egg-drop{
+  100%{
+    -webkit-transform: rotate(27deg) translate(-265px, 40px);
+            transform: rotate(27deg) translate(-265px, 40px);
+  }
+}
+
+
+@keyframes top-left-egg-drop{
+  100%{
+    -webkit-transform: rotate(27deg) translate(-265px, 40px);
+            transform: rotate(27deg) translate(-265px, 40px);
+  }
+}
+@-webkit-keyframes bottom-left-egg-drop{
+  100%{
+    -webkit-transform: rotate(28deg) translate(-250px, 230px);
+            transform: rotate(28deg) translate(-250px, 230px);
+  }
+}
+@keyframes bottom-left-egg-drop{
+  100%{
+    -webkit-transform: rotate(28deg) translate(-250px, 230px);
+            transform: rotate(28deg) translate(-250px, 230px);
+  }
+}
+@-webkit-keyframes top-right-egg-drop{
+  100%{
+    -webkit-transform: rotate(-28deg) translate(330px, 80px);
+            transform: rotate(-28deg) translate(330px, 80px);
+  }
+}
+@keyframes top-right-egg-drop{
+  100%{
+    -webkit-transform: rotate(-28deg) translate(330px, 80px);
+            transform: rotate(-28deg) translate(330px, 80px);
+  }
+}
+@-webkit-keyframes bottom-right-egg-drop{
+  100%{
+    -webkit-transform: rotate(-27deg) translate(185px, 188px);
+            transform: rotate(-27deg) translate(185px, 188px);
+  }
+}
+@keyframes bottom-right-egg-drop{
+  100%{
+    -webkit-transform: rotate(-27deg) translate(185px, 188px);
+            transform: rotate(-27deg) translate(185px, 188px);
+  }
+}
+@-webkit-keyframes egg-sprite{
+  100%{
+    background-position-x: 100%;
+  }
+}
+@keyframes egg-sprite{
+  100%{
+    background-position-x: 100%;
+  }
+}
+
